@@ -6,6 +6,7 @@ services:
     build: ./nginx/
     image: nginx-img:0.0.1
     container_name: nginx
+    hostname: nginx
     depends_on:
         - php.fpm
     networks:
@@ -27,6 +28,7 @@ services:
     build: ./php-fpm/
     image: php.fpm-img:0.0.1
     container_name: php.fpm
+    hostname: php.fpm
     networks:
         - web_vlan
     volumes:
