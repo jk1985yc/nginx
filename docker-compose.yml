@@ -16,7 +16,7 @@ services:
         - ./nginx/conf/conf.d/:/etc/nginx/conf.d/
         - ./nginx/conf/fastcgi.conf:/etc/nginx/fastcgi.conf
         - ./www:/www
-        - ./ssl/://etc/nginx/ssl/
+        - ./ssl/:/etc/nginx/ssl/
         - ./logs:/var/log/nginx
         - "phpsocket:/var/run"
     restart: always
