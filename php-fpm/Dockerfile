@@ -1,6 +1,9 @@
 FROM php:5.6.40-fpm
 #FROM php:5.6.34-fpm
 
+#change repository
+RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
+
 #install mcrypt、mysql Module
 RUN apt-get update && apt-get install -y \
         libfreetype6-dev \
